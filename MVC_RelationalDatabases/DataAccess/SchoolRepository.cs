@@ -25,5 +25,10 @@ namespace MVC_RelationalDatabases.DataAccess
             return sc.Students;
         }
 
+        public IEnumerable<Models.Student> AddStudent(Models.Student student)
+        {
+            return sc.Students;
+        }
+
     }
 }
