@@ -3,6 +3,7 @@ using MVC_RelationalDatabases.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -34,6 +35,20 @@ namespace MVC_RelationalDatabases.Controllers
                 sc.Students.Add(student);
                 sc.SaveChanges();
                 return RedirectToAction("Index");
+            }
+            return View(student);
+        }
+
+        public ActionResult Details(int? ID)
+        {
+            if (ID == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Student student = sc.Students.Find(ID);
+            if (student == null)
+            {
+                return HttpNotFound();
             }
             return View(student);
         }

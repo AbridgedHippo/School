@@ -19,5 +19,11 @@ namespace MVC_RelationalDatabases.DataAccess
         {
             return sc.Classes;
         }
+
+        public IEnumerable<Models.Student> GetStudentDetails(int ID)
+        {
+            return sc.Students;
+        }
+
     }
 }

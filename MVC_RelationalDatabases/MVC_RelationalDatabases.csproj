@@ -181,6 +181,7 @@
     <Content Include="Views\School\Index.cshtml" />
     <Content Include="Views\Class\Index.cshtml" />
     <Content Include="Views\Class\Create.cshtml" />
+    <Content Include="Views\School\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201711081238208_initial.resx">
